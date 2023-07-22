@@ -1,0 +1,26 @@
+<!-- product_request_management/views/request_detail_views.xml -->
+<odoo>
+    <data>
+        <record id="view_request_detail_form" model="ir.ui.view">
+            <field name="name">request.detail.form</field>
+            <field name="model">request.detail</field>
+            <field name="arch" type="xml">
+                <!-- Define the form view layout for request.detail model -->
+                <form string="Request Detail">
+                    <!-- Add fields you want to display in the form view -->
+                    <group>
+                        <field name="name"/>
+                        <field name="spesification"/>
+                        <field name="brochure"/>
+                        <field name="quantity"/>
+                        <field name="quantity_moved"/>
+                        <field name="quantity_po"/>
+                        <field name="quantity_remaining"/>
+                        <field name="product_id"/>
+                        <field name="product_request_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
