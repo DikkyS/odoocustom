@@ -1,0 +1,59 @@
+<!-- product_request_management/data/product_request_data.xml -->
+<odoo>
+    <!-- Add the corrected view definition -->
+    <record id="view_product_request_form" model="ir.ui.view">
+        <field name="name">product.request.form</field>
+        <field name="model">product.request</field>
+        <field name="arch" type="xml">
+            <form string="Product Request">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="date"/>
+                        <field name="date_required"/>
+                        <field name="reason"/>
+                        <field name="state" widget="statusbar" clickable="True"/>
+                        <field name="stage_id"/>
+                    </group>
+                </sheet>
+                <notebook>
+                    <page string="Transfers">
+                        <field name="transfer_ids" mode="tree,kanban"/>
+                    </page>
+                    <page string="Purchase Orders">
+                        <field name="po_ids" mode="tree,kanban"/>
+                    </page>
+                    <page string="Request Details">
+                        <field name="detail_ids" mode="tree,kanban">
+                            <tree editable="bottom">
+                                <!-- Display the new fields in the product details section -->
+                                <field name="product_id"/>
+                                <field name="quantity"/>
+                                <field name="quantity_moved"/>
+                                <field name="quantity_po"/>
+                                <field name="quantity_remaining"/>
+                                <!-- Add other fields from request.detail if needed -->
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+                <!-- Add smart buttons for total Internal Transfer and PO created -->
+                <footer>
+                    <button string="Internal Transfers" type="action" name="action_view_internal_transfers" icon="fa-truck"/>
+                    <button string="Purchase Orders" type="action" name="action_view_purchase_orders" icon="fa-file-text-o"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Add the missing external ID for the action -->
+    <record id="action_product_request_draft" model="ir.actions.act_window">
+        <field name="name">Draft Requests</field>
+        <field name="res_model">product.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_product_request_form"/> <!-- Replace 'view_product_request_tree' with 'view_product_request_form' -->
+        <field name="domain">[('state', '=', 'draft')]</field>
+    </record>
+    <!-- Existing view and action records -->
+
+</odoo>

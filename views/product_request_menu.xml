@@ -1,0 +1,33 @@
+<!-- product_request_management/views/product_request_menu.xml -->
+<odoo>
+    <data>
+        <!-- Menu Item for Product Requests -->
+        <menuitem id="menu_product_requests" name="Product Requests" sequence="10"/>
+        <menuitem id="menu_product_requests_draft" name="Draft Requests" parent="menu_product_requests"
+                  action="action_product_request_draft" sequence="1"/>
+        <menuitem id="menu_product_requests_open" name="Open Requests" parent="menu_product_requests"
+                  action="action_product_request_open" sequence="2"/>
+        <menuitem id="menu_product_requests_done" name="Done Requests" parent="menu_product_requests"
+                  action="action_product_request_done" sequence="3"/>
+
+        <!-- Action for Product Requests -->
+        <record id="action_product_request_draft" model="ir.actions.act_window">
+            <field name="name">Draft Requests</field>
+            <field name="res_model">product.request</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state', '=', 'draft')]</field>
+        </record>
+        <record id="action_product_request_open" model="ir.actions.act_window">
+            <field name="name">Open Requests</field>
+            <field name="res_model">product.request</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state', '=', 'open')]</field>
+        </record>
+        <record id="action_product_request_done" model="ir.actions.act_window">
+            <field name="name">Done Requests</field>
+            <field name="res_model">product.request</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state', '=', 'done')]</field>
+        </record>
+    </data>
+</odoo>
