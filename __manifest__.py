@@ -1,4 +1,4 @@
-# product_request_management/__manifest__.py
+## product_request_management/__manifest__.py
 {
     'name': 'Product Request Management',
     'version': '1.0',

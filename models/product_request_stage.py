@@ -1,4 +1,4 @@
-# product_request_management/models/product_request_stage.py
+## product_request_management/models/product_request_stage.py
 from odoo import models, fields
 
 class ProductRequestStage(models.Model):

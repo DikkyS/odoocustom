@@ -1,7 +1,7 @@
-# product_request_management/controllers/custom_controller.py
+## product_request_management/controllers/custom_controller.py
+
 from odoo import http
 from odoo.http import request, JsonRequest
-
 
 class CustomController(http.Controller):
 

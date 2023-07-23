@@ -1,4 +1,4 @@
-<!-- product_request_management/data/product_request_menu.xml -->
+<!--product_request_management/data/product_request_menu.xml -->
 <odoo>
     <data>
         <!-- Menu Item for Product Requests -->
@@ -9,7 +9,6 @@
                   action="action_product_request_open" sequence="2"/>
         <menuitem id="menu_product_requests_done" name="Done Requests" parent="menu_product_requests"
                   action="action_product_request_done" sequence="3"/>
-
         <!-- Action for Product Requests -->
         <record id="action_product_request_draft" model="ir.actions.act_window">
             <field name="name">Draft Requests</field>

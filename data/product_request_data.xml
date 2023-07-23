@@ -1,6 +1,6 @@
-<!-- product_request_management/data/product_request_data.xml -->
+<!----> product_request_management/data/product_request_data.xml -->
 <odoo>
-    <!-- Add the corrected view definition -->
+<!-- Add the corrected view definition -->
     <record id="view_product_request_form" model="ir.ui.view">
         <field name="name">product.request.form</field>
         <field name="model">product.request</field>

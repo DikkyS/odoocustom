@@ -1,4 +1,5 @@
-# product_request_management/models/request_detail.py
+## product_request_management/models/request_detail.py
+
 from odoo import models, fields, api
 
 class RequestDetail(models.Model):
