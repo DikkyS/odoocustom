@@ -1,8 +1,10 @@
+==============================
 Prepare by : Dikky Suryadi
+===============================
 **#product_request_management**
 Repo File Odoo Custom 
 All Related included For product_request_management Task-2 Vitraining
-=======================================================================
+
 Tahapan langkah dari pengerjaan UML diatas
 **1. Create the Odoo module:**
         ◦ Create directory baru untuk module, contoh., "product_request_management".
